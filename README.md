@@ -19,7 +19,7 @@ This repository presents a **Chatbot Application** powered by the **DeepSeek-V3 
 ## Prerequirements
 
 - ![Python 3.9](https://img.shields.io/badge/Python-3.9-blue) or above: [Download here](https://python.org/downloads)
-- Hugging Face account: [Sign in here](https://huggingface.co)
+- Hugging Face account: [Sign up here](https://huggingface.co)
 
 ## Project Structure
 
