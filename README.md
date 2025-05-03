@@ -2,7 +2,7 @@
 
 ## Introduction
 
-
+This repository presents a **Chatbot Application** powered by the **DeepSeek-V3 model**. Designed with a mix of **CSS**, **JavaScript**, **Python**, and **HTML**, it combines visually appealing design with intelligent conversational capabilities. The project exemplifies the seamless integration of AI-driven dialogue systems with a polished user experience.
 
 ## Table of Contents
 
