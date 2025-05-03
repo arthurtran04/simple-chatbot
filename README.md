@@ -28,6 +28,7 @@ Chatbot/
 ├── static/
 │   ├── css/
 │   │   └── style.css
+│   ├── script.js
 │   └── icons...
 ├── templates/
 │   └── index.html
