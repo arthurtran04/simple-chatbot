@@ -13,7 +13,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Setting the API token and URL for the Hugging Face model
-API_TOKEN = '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' # Replace with your Hugging Face API token
+API_TOKEN = 'hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' # Replace with your Hugging Face API token
 API_URL = "https://router.huggingface.co/fireworks-ai/inference/v1/chat/completions"
 # Setting the headers for the API request
 headers = {
