@@ -1,8 +1,8 @@
-# Image Captioning Application using BLIP model
+# Chatbot Application using DeepSeek-V3 model
 
 ## Introduction
 
-This repository showcases an innovative **Image Captioning Application** powered by the **BLIP model** (Bootstrapping Language-Image Pre-training). Built entirely in **Python**, this project demonstrates the fascinating intersection of computer vision and natural language processing by automatically generating descriptive captions for images. Perfect for those interested in exploring multimodal AI applications!
+
 
 ## Table of Contents
 
@@ -12,6 +12,7 @@ This repository showcases an innovative **Image Captioning Application** powered
 - [Model](#model)
 - [Features](#features)
 - [Installation](#installation)
+- [How to get API Access Token](#how-to-get-api-access-token)
 - [Usage](#usage)
 - [License](#license)
 
@@ -22,12 +23,15 @@ This repository showcases an innovative **Image Captioning Application** powered
 ## Project Structure
 
 ```
-Image-Captioning-App/
-├── test/
-│   ├── test.py
-│   └── ronaldo.jpg
+Chatbot/
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── icons...
+├── templates/
+│   └── index.html
 ├── .gitignore
-├── image_captioning_app.py
+├── app.py
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -49,13 +53,13 @@ To install this project, open your Terminal and follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/arthurtran04/Image-Captioning-App.git
+    git clone https://github.com/arthurtran04/Chatbot.git
     ```
 
-2. Change the directory to `Image-Captioning-App`:
+2. Change the directory to `Chatbot`:
 
     ```bash
-    cd "$(find . -type d -name "Image-Captioning-App")"
+    cd "$(find . -type d -name "Chatbot")"
     ```
 
 3. Create a Python virtual environment `venv` and install the required dependencies:
@@ -66,24 +70,49 @@ To install this project, open your Terminal and follow these steps:
     pip install -r requirements.txt
     ```
 
+## How to get API Access Token
+
+<p align="center">
+  <div style="display: inline-block; text-align: center; margin: 10px;">
+    <p>1. Click your avatar and click "Access Tokens"</p>
+    <img src="https://github.com/user-attachments/assets/55e6e178-55dd-4b6b-b738-e3c6a9c51206" width="300rem" style="vertical-align: top;" />
+  </div>
+  <div style="display: inline-block; text-align: center; margin: 10px;">
+    <p>2. Click "Create new token"</p>
+    <img src="https://github.com/user-attachments/assets/b4d09f00-da1d-4f4f-b57d-b55293cb7161" width="600rem" style="vertical-align: top;" />
+  </div>
+  <div style="display: inline-block; text-align: center; margin: 10px;">
+    <p>3. Name your token and tick the two checkboxes in the "Inference" section</p>
+    <img src="https://github.com/user-attachments/assets/862828cb-1a02-4d12-8727-26aa5460f006" width="600rem" style="vertical-align: top;" />
+  </div>
+  <div style="display: inline-block; text-align: center; margin: 10px;">
+    <p>4. Scroll down and click "Create token"</p>
+    <img src="https://github.com/user-attachments/assets/14be640c-2c0f-467d-85d9-db3b31b43174" width="600rem" style="vertical-align: top;" />
+  </div>
+  <div style="display: inline-block; text-align: center; margin: 10px;">
+    <p>5. Copy your Access Token before closing and paste it into the <code>API_TOKEN</code> variable inside the code</p>
+    <img src="https://github.com/user-attachments/assets/8a087c0b-51dd-40c2-9576-c9529ed915ed" width="600rem" style="vertical-align: top;" />
+  </div>
+</p>
+
 ## Usage
 
-To start the application, run the `image_captioning_app.py` file:
+To start the application, run the `app.py` file:
 
    ```bash
-   python image_captioning_app.py
+   python app.py
    ```
-This application will run locally at `http://127.0.0.1:7860`:
+This application will run locally at `http://127.0.0.1:5000`:
 
-<img width="600rem" alt="Terminal" src="https://github.com/user-attachments/assets/67f66624-ba28-4c98-98f6-dc39f4da8c8c"/>
+<img width="600rem" alt="Terminal" src="https://github.com/user-attachments/assets/924a34a2-712d-44a6-8a8d-6f47b35c6b5b"/>
 
 The UI:
 
-<img width="600rem" alt="Webpage" src="https://github.com/user-attachments/assets/1fd98fa5-1901-434a-93af-5f1b96c4cf8f"/>
+<img width="600rem" alt="Webpage" src="https://github.com/user-attachments/assets/bb2e62cd-aa9d-4303-ad74-f72e70eaa9c0"/>
 
-Upload your photo in the left box and click **Submit** button, the application will generate the image caption in the right box:
+Enter your prompt in the textbox below, and the chatbot will respond:
 
-<img width="600rem" alt="Example" src="https://github.com/user-attachments/assets/b80dc8d4-c005-49c7-b11c-7cec7f209d6f"/>
+<img width="600rem" alt="Example" src="https://github.com/user-attachments/assets/07cf32c0-3d37-454c-913d-425fd0461319"/>
 
 To stop the application, use `Ctrl + C` in the Terminal
 
