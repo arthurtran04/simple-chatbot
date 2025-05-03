@@ -13,7 +13,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Setting the API token and URL for the Hugging Face model
-API_TOKEN = 'hf_xxxxxxxxxxxxxxxxxxxxxxxx' # Replace with your Hugging Face API token
+API_TOKEN = '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' # Replace with your Hugging Face API token
 API_URL = "https://router.huggingface.co/fireworks-ai/inference/v1/chat/completions"
 # Setting the headers for the API request
 headers = {
@@ -33,13 +33,12 @@ def handle_prompt():
 
     # Setting the model and messages for the API request
     response = requests.post(API_URL, headers=headers, json=payload, timeout=10)
+    response = response.json()
 
     if response.status_code != 200:
         # If the response is not successful, return an error message
         return "Error: Unable to get a response from the model. Please try again later, check your code or your API token."
-    # If the response is successful, parse the JSON response
-    # and return the content of the first choice
-    response = response.json()
+    # If the response is successful, return the model's response
     return response['choices'][0]['message']['content']
 
 @app.route('/')
