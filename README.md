@@ -46,6 +46,7 @@ Chatbot/
 
 - Chatbot Application using DeepSeek-V3 model from Hugging Face
 - Using Flask for back-end development
+- Using Pylint for code analysis
 
 ## Installation
 
