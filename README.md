@@ -76,7 +76,7 @@ To install this project, open your Terminal and follow these steps:
 
 <p align="center">
   <div style="display: inline-block; text-align: center; margin: 10px;">
-    <p>1. Click your avatar and click "Access Tokens"</p>
+    <p>1. Go to <a href="https://huggingface.co">Hugging Face website</a>, click your avatar and click "Access Tokens"</p>
     <img src="https://github.com/user-attachments/assets/55e6e178-55dd-4b6b-b738-e3c6a9c51206" width="300rem" style="vertical-align: top;" />
   </div>
   <div style="display: inline-block; text-align: center; margin: 10px;">
