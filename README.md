@@ -35,12 +35,12 @@ Image-Captioning-App/
 
 ## Model
 
-- [Salesforce/blip-image-captioning-base](https://huggingface.co/Salesforce/blip-image-captioning-base)
+- [deepseek-ai/DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)
 
 ## Features
 
-- Image Captioning Application using BLIP model from Hugging Face's Transformers
-- Using Gradio UI
+- Chatbot Application using DeepSeek-V3 model from Hugging Face
+- Using Flask for back-end development
 
 ## Installation
 
