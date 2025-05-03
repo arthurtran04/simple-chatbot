@@ -44,7 +44,14 @@ const sendMessage = async (message) => {
   async function makePostRequest(msg) {
     const url = 'http://127.0.0.1:5000/chatbot';  // Make a POST request to this url
     const requestBody = {
-      prompt: msg
+      "messages": [
+          {
+            "role": "user",
+            "content": msg
+          }
+      ],
+      "max_tokens": 512,
+      "model": "accounts/fireworks/models/deepseek-v3"
     };
   
     try {

@@ -1,57 +1,46 @@
 '''
-This is the main file for the chatbot application.
-It is a simple Flask application that allows users to chat with a chatbot.
-The chatbot is based on the Blenderbot model from Facebook.
+This is a simple Flask application that serves as a chatbot interface.
+It uses the Hugging Face API to get responses from DeepSeek-V3 model.
 '''
 # Importing the necessary libraries
 import json
+import requests
 from flask import Flask, request, render_template
 from flask_cors import CORS
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 # Initializing the Flask application
 app = Flask(__name__)
 CORS(app)
 
-# Loading the Blenderbot model and tokenizer
-MODEL_NAME = "facebook/blenderbot-400M-distill"
-model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME)
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-
-# Initializing the conversation history
-conversation_history = []
+# Setting the API token and URL for the Hugging Face model
+API_TOKEN = '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' # Replace with your Hugging Face API token hf_xxxxxxxxxxxxxxxxxxxxxxxx
+API_URL = "https://router.huggingface.co/fireworks-ai/inference/v1/chat/completions"
+# Setting the headers for the API request
+headers = {
+    "Authorization": f"Bearer {API_TOKEN}"
+}
 
 # Defining the route for the chatbot
 @app.route('/chatbot', methods=['POST'])
 def handle_prompt():
     '''
-    This function handles the prompt from the user.
-    It gets the prompt from the request and creates a conversation history string.
-    It then tokenizes the input text and history and generates the response from the model.
+    This function handles the POST request from the chatbot interface.
+    It sends the prompt to the Hugging Face API and returns the response.
     '''
     # Getting the prompt from the request
     data = request.get_data(as_text=True)
-    data = json.loads(data)
-    input_text = data['prompt']
+    payload = json.loads(data)
 
-    # Create conversation history string
-    history = "\n".join(conversation_history)
+    # Setting the model and messages for the API request
+    response = requests.post(API_URL, headers=headers, json=payload, timeout=10)
 
-    # Tokenize the input text and history
-    inputs = tokenizer.encode_plus(history, input_text, return_tensors="pt")
-
-    # Generate the response from the model
-    outputs = model.generate(**inputs, max_length=60)
-    # max_length will cause the model to crash at some point as history grows
-
-    # Decode the response
-    response = tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
-
-    # Add interaction to conversation history
-    conversation_history.append(input_text)
-    conversation_history.append(response)
-
-    return response
+    if response.status_code != 200:
+        # If the response is not successful, return an error message
+        return "Error: Unable to get a response from the model. Please try again later, check your code or your API token."
+    # If the response is successful, parse the JSON response
+    # and return the content of the first choice
+    response = response.json()
+    return response['choices'][0]['message']['content']
 
 @app.route('/')
 def home():
