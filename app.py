@@ -39,7 +39,7 @@ def handle_prompt():
 
     if response.status_code != 200:
         # If the response is not successful, return an error message
-        return "Error: Unable to get a response from the model. Please try again later, check your code or your API token."
+        return "Error: Unable to get a response. Please check your code or your API token."
     # If the response is successful, return the model's response
     return response['choices'][0]['message']['content']
 
