@@ -73,6 +73,13 @@ To install this project, open your Terminal and follow these steps:
     pip install -r requirements.txt
     ```
 
+4. Create a `.env` file to save your API token:
+
+   ```bash
+   touch .env
+   echo "API_TOKEN = " > .env
+   ```
+
 ## How to get API Access Token
 
 <p align="center">
@@ -93,7 +100,7 @@ To install this project, open your Terminal and follow these steps:
     <img src="https://github.com/user-attachments/assets/14be640c-2c0f-467d-85d9-db3b31b43174" width="600rem" style="vertical-align: top;" />
   </div>
   <div style="display: inline-block; text-align: center; margin: 10px;">
-    <p>5. Copy your Access Token before closing and paste it into the <code>API_TOKEN</code> variable inside the code</p>
+    <p>5. Copy your Access Token before closing and paste it into the <code>API_TOKEN</code> variable inside the <code>.env</code> file</p>
     <img src="https://github.com/user-attachments/assets/8a087c0b-51dd-40c2-9576-c9529ed915ed" width="600rem" style="vertical-align: top;" />
   </div>
 </p>
