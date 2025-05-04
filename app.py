@@ -35,13 +35,14 @@ def handle_prompt():
 
     # Setting the model and messages for the API request
     response = requests.post(API_URL, headers=headers, json=payload, timeout=10)
-    response = response.json()
 
+    # If the response is not successful, return an error message
     if response.status_code != 200:
-        # If the response is not successful, return an error message
-        return "Error: Unable to get a response. Please check your code or your API token."
-    # If the response is successful, return the model's response
-    return response['choices'][0]['message']['content']
+        return "Error: Unable to get a response. Please try again later."
+    # If the response is successful, return the content of the response
+    else:
+        response = response.json()
+        return response['choices'][0]['message']['content']
 
 @app.route('/')
 def home():
