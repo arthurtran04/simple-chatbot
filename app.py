@@ -3,8 +3,10 @@ This is a simple Flask application that serves as a chatbot interface.
 It uses the Hugging Face API to get responses from DeepSeek-V3 model.
 '''
 # Importing the necessary libraries
+import os
 import json
 import requests
+from dotenv import load_dotenv
 from flask import Flask, request, render_template
 from flask_cors import CORS
 
@@ -13,11 +15,11 @@ app = Flask(__name__)
 CORS(app)
 
 # Setting the API token and URL for the Hugging Face model
-API_TOKEN = 'hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' # Replace with your Hugging Face API token
+load_dotenv() # Load environment variables from .env file
 API_URL = "https://router.huggingface.co/fireworks-ai/inference/v1/chat/completions"
 # Setting the headers for the API request
 headers = {
-    "Authorization": f"Bearer {API_TOKEN}"
+    "Authorization": f"Bearer {os.getenv('API_TOKEN')}" # API token from environment variable
 }
 
 # Defining the route for the chatbot
