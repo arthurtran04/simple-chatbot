@@ -59,7 +59,7 @@ To install this project, open your Terminal and follow these steps:
     git clone https://github.com/arthurtran04/chatbot.git
     ```
 
-2. Change the directory to `Chatbot`:
+2. Change the directory to `chatbot`:
 
     ```bash
     cd "$(find . -type d -name "chatbot")"
