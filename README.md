@@ -24,7 +24,7 @@ This repository presents a **Chatbot Application** powered by the **DeepSeek-V3 
 ## Project Structure
 
 ```
-Chatbot/
+chatbot/
 ├── static/
 │   ├── css/
 │   │   └── style.css
@@ -56,13 +56,13 @@ To install this project, open your Terminal and follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/arthurtran04/Chatbot.git
+    git clone https://github.com/arthurtran04/chatbot.git
     ```
 
 2. Change the directory to `Chatbot`:
 
     ```bash
-    cd "$(find . -type d -name "Chatbot")"
+    cd "$(find . -type d -name "chatbot")"
     ```
 
 3. Create a Python virtual environment `venv` and install the required dependencies:
