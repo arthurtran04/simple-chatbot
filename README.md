@@ -55,28 +55,28 @@ To install this project, open your Terminal and follow these steps:
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/arthurtran04/chatbot.git
+    ```sh
+    $ git clone https://github.com/arthurtran04/chatbot.git
     ```
 
 2. Change the directory to `chatbot`:
 
-    ```bash
-    cd "$(find . -type d -name "chatbot")"
+    ```sh
+    $ cd "$(find . -type d -name "chatbot")"
     ```
 
 3. Create a Python virtual environment `venv` and install the required dependencies:
 
-    ```bash
-    python -m venv venv
+    ```sh
+    $ python -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
     ```
 
 4. Create a `.env` file to save your API token:
 
-   ```bash
-   touch .env
+   ```sh
+   $ touch .env
    echo "API_TOKEN = " > .env
    ```
 
@@ -110,8 +110,8 @@ To install this project, open your Terminal and follow these steps:
 
 To start the application, run the `app.py` file:
 
-   ```bash
-   python app.py
+   ```sh
+   $ python app.py
    ```
 This application will run locally at `http://127.0.0.1:5000`:
 
