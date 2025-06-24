@@ -77,7 +77,7 @@ To install this project, open your Terminal and follow these steps:
 
    ```sh
    $ touch .env
-   echo "API_TOKEN = " > .env
+   echo "API_TOKEN=" > .env
    ```
 
 ## How to get API Access Token
