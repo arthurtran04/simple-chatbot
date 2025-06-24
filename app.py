@@ -16,7 +16,7 @@ CORS(app)
 
 # Setting the API token and URL for the Hugging Face model
 load_dotenv() # Load environment variables from .env file
-API_URL = "https://router.huggingface.co/fireworks-ai/inference/v1/chat/completions"
+API_URL="https://router.huggingface.co/fireworks-ai/inference/v1/chat/completions"
 # Setting the headers for the API request
 headers = {
     "Authorization": f"Bearer {os.getenv('API_TOKEN')}" # API token from environment variable
