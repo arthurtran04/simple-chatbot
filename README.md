@@ -1,8 +1,8 @@
-# Chatbot Application using DeepSeek-V3 model
+# Simple Chatbot Application using DeepSeek-V3 model
 
 ## Introduction
 
-This repository presents a **Chatbot Application** powered by the **DeepSeek-V3 model**. Designed with a mix of **CSS**, **JavaScript**, **Python**, and **HTML**, it combines visually appealing design with intelligent conversational capabilities. The project exemplifies the seamless integration of AI-driven dialogue systems with a polished user experience.
+This repository presents a **Simple Chatbot Application** powered by the **DeepSeek-V3 model**. Designed with a mix of **CSS**, **JavaScript**, **Python**, and **HTML**, it combines visually appealing design with intelligent conversational capabilities. The project exemplifies the seamless integration of AI-driven dialogue systems with a polished user experience.
 
 ## Table of Contents
 
@@ -24,7 +24,7 @@ This repository presents a **Chatbot Application** powered by the **DeepSeek-V3 
 ## Project Structure
 
 ```
-chatbot/
+simple-chatbot/
 ├── static/
 │   ├── css/
 │   │   └── style.css
@@ -45,7 +45,7 @@ chatbot/
 
 ## Features
 
-- Chatbot Application using DeepSeek-V3 model from Hugging Face
+- Simple Chatbot Application using DeepSeek-V3 model from Hugging Face
 - Using Flask for back-end development
 - Using Pylint for code analysis
 
@@ -56,20 +56,20 @@ To install this project, open your Terminal and follow these steps:
 1. Clone the repository:
 
     ```sh
-    $ git clone https://github.com/arthurtran04/chatbot.git
+    $ git clone https://github.com/arthurtran04/simple-chatbot.git
     ```
 
-2. Change the directory to `chatbot`:
+2. Change the directory to `simple-chatbot`:
 
     ```sh
-    $ cd "$(find . -type d -name "chatbot")"
+    $ cd "$(find . -type d -name "simple-chatbot")"
     ```
 
-3. Create a Python virtual environment `venv` and install the required dependencies:
+3. Create a Python virtual environment `.venv` and install the required dependencies:
 
     ```sh
-    $ python3 -m venv venv
-    source venv/bin/activate
+    $ python3 -m venv .venv
+    source .venv/bin/activate
     pip install -r requirements.txt
     ```
 
