@@ -35,6 +35,7 @@ simple-chatbot/
 ├── .gitignore
 ├── app.py
 ├── requirements.txt
+├── .env.example
 ├── LICENSE
 └── README.md
 ```
