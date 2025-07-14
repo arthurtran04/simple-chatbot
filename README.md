@@ -42,7 +42,7 @@ simple-chatbot/
 
 ## Model
 
-- [deepseek-ai/DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)
+- [deepseek-ai/DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3) (You can use different models)
 
 ## Features
 
