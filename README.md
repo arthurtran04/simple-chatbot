@@ -1,8 +1,8 @@
-# Simple Chatbot Application using DeepSeek-V3 model
+# Simple Chatbot
 
 ## Introduction
 
-This repository presents a **Simple Chatbot Application** powered by the **DeepSeek-V3 model**. Designed with a mix of **CSS**, **JavaScript**, **Python**, and **HTML**, it combines visually appealing design with intelligent conversational capabilities. The project exemplifies the seamless integration of AI-driven dialogue systems with a polished user experience.
+This repository presents a **Simple Chatbot** application powered by the **DeepSeek-V3 model**. Designed with a mix of **CSS**, **JavaScript**, **Python**, and **HTML**, it combines visually appealing design with intelligent conversational capabilities. The project exemplifies the seamless integration of AI-driven dialogue systems with a polished user experience.
 
 ## Table of Contents
 
@@ -45,9 +45,7 @@ simple-chatbot/
 
 ## Features
 
-- Simple Chatbot Application using DeepSeek-V3 model from Hugging Face
-- Using Flask for back-end development
-- Using Pylint for code analysis
+Respond to user questions.
 
 ## Installation
 
@@ -73,11 +71,17 @@ To install this project, open your Terminal and follow these steps:
     pip install -r requirements.txt
     ```
 
-4. Create a `.env` file to save your API token:
+4. Set up environment variables:
 
    ```sh
-   $ touch .env
-   echo "API_TOKEN=" > .env
+   $ cp .env.example .env
+   ```
+
+5. Configure your `.env` file:
+
+   ```env
+   # Hugging Face API Token
+   API_TOKEN=
    ```
 
 ## How to get API Access Token
